@@ -1,0 +1,13 @@
+nav {
+  font-family: 'Raleway', sans-serif;
+  background-color: #e1e2e1;
+  border-bottom: 1px solid #226de8;
+  box-shadow: 0 4px 8px -3px #999;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: #950037;
+}
