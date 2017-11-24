@@ -1,0 +1,38 @@
+h1.title {
+	letter-spacing: 0.3em;
+	width: 100vw;
+	display: inline-block;
+	/*float: left;*/
+	font-weight: bold;
+	font-size: 4em;
+}
+
+#cover {
+	background:#e1e2e1 url('https://source.unsplash.com/MhOoD_h90ks/') center center no-repeat;
+	background-size: cover;
+	opacity: 0.95;
+	height: 100vh;
+	width: 100vw;
+	text-align: center;
+	color: #e1e2e1;
+}
+
+#cover-caption {
+	position: absolute;
+	top: 30vh;
+	bottom: 20vh;
+}
+
+#order-button-container {
+	margin-top: 20vh;
+}
+
+#order-button {
+	background-color: #CC0060;
+	border: none;
+	color: #e1e2e1;
+	font-size: 22px;
+	box-shadow: 0 0px 18px -3px #e1e2e1;
+	font-weight: bold;
+	width: 10em;
+}
