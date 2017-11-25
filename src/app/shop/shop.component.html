@@ -1,3 +1,57 @@
-<p>
-  shop works!
-</p>
+<div class="container" id="shop">
+  <div id="cart">
+    <div class="button-container">
+      <button type="button" class="btn btn-lg" (click)="open(content)">
+        My Cart
+        <span>{{cart.length}}</span>
+      </button>
+    </div><!-- /.button-container -->
+    <ng-template #content let-c="close">
+      <div class="modal-header">
+        <h4 class="modal-title">Checkout</h4>
+        <button type="button" class="close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li *ngFor="let item of cart; let i = item">
+            {{ item.checkoutString() }}
+            <a ng-click="removeCart(item,i)">
+              <i class="pull-right glyphicon glyphicon-remove"></i>
+            </a>
+          </li>
+        </ul>
+        <p>Total: ${{ total }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="c('Close click')">Close</button>
+      </div>
+    </ng-template>
+
+    <div class="row drink-list-container">
+      <div class="col-xs-12 col-sm-6 col-lg-3" *ngFor="let drink of drinkList; let i = index">
+        <div class="thumbnail">
+          <img [src]="imgSrc(drink)" [alt]="drink.base.name">
+          <ul class="caption">
+            <p>
+              <span class="drink-name">{{ drink.base.name }}</span> (${{ drink.base.price }})
+            </p>
+            <li *ngFor="let item of drink.modifier; let i = index">
+              <p>
+                {{ drink.modifier[i].name }} (${{ drink.modifier[i].price }})
+              </p>
+              <input type="number" class="form-control" id="" [(ngModel)]="drink.modifier[i].count">
+            </li>
+            <p class="drink-price">Price: ${{ drink.price() }}</p>
+            <div id="add-to-cart-button-container">
+              <button class="btn" id="add-to-cart-button" (click)="addCart(drink)">Add to Cart</button>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#cart -->
+</div>
+<!-- /#shop -->
