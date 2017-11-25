@@ -17,8 +17,8 @@
         <ul>
           <li *ngFor="let item of cart; let i = item">
             {{ item.checkoutString() }}
-            <a ng-click="removeCart(item,i)">
-              <i class="pull-right glyphicon glyphicon-remove"></i>
+            <a (click)="removeCart(item,i)">
+              <i class="float-right ion-close"></i>
             </a>
           </li>
         </ul>
@@ -28,30 +28,30 @@
         <button type="button" class="btn btn-default" (click)="c('Close click')">Close</button>
       </div>
     </ng-template>
-
-    <div class="row drink-list-container">
-      <div class="col-xs-12 col-sm-6 col-lg-3" *ngFor="let drink of drinkList; let i = index">
-        <div class="thumbnail">
-          <img [src]="imgSrc(drink)" [alt]="drink.base.name">
-          <ul class="caption">
-            <p>
-              <span class="drink-name">{{ drink.base.name }}</span> (${{ drink.base.price }})
-            </p>
-            <li *ngFor="let item of drink.modifier; let i = index">
+    <div class="">
+      <div class="row drink-list-container">
+        <div class="col-12 col-md-6 col-xl-3" *ngFor="let drink of drinkList; let i = index">
+          <div class="card">
+            <img [src]="imgSrc(drink)" [alt]="drink.base.name" class="card-img-top">
+            <ul class="card-body">
               <p>
-                {{ drink.modifier[i].name }} (${{ drink.modifier[i].price }})
+                <span class="drink-name">{{ drink.base.name }}</span> (${{ drink.base.price }})
               </p>
-              <input type="number" class="form-control" id="" [(ngModel)]="drink.modifier[i].count">
-            </li>
-            <p class="drink-price">Price: ${{ drink.price() }}</p>
-            <div id="add-to-cart-button-container">
-              <button class="btn" id="add-to-cart-button" (click)="addCart(drink)">Add to Cart</button>
-            </div>
-          </ul>
+              <li *ngFor="let item of drink.modifier; let i = index">
+                <p>
+                  {{ drink.modifier[i].name }} (${{ drink.modifier[i].price }})
+                </p>
+                <input type="number" class="form-control" id="" [(ngModel)]="drink.modifier[i].count">
+              </li>
+              <p class="drink-price">Price: ${{ drink.price() }}</p>
+              <div id="add-to-cart-button-container">
+                <button class="btn" id="add-to-cart-button" (click)="addCart(drink)">Add to Cart</button>
+              </div>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- /#cart -->
+  </div><!-- /#cart -->
 </div>
 <!-- /#shop -->

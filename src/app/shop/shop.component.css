@@ -7,6 +7,7 @@
   display: block;
   margin: 30px auto 20px;
   float: right;
+  padding: 0 30px;
 }
 
 .button-container>button {
@@ -22,19 +23,26 @@
   color: #000;
 }
 
-/* .modal-body p {
+.modal-title {
+  font-size: 1.2rem;
+}
+
+.modal-body p {
   font-weight: bold;
   text-align: right;
   margin-top: 10%;
-  font-size: 1.8rem;
 }
 
 .modal-body a {
   color: #cc0060;
-} */
+}
 
+.modal-footer button {
+  background-color: #E1E2E1;
+}
 .drink-list-container {
   margin-top: 40px;
+  width: 100%;
 }
 
 .caption p {
@@ -44,7 +52,7 @@
 span.drink-name {
   font-weight: 500;
   margin-left: 0 !important;
-  font-size: 2rem;
+  font-size: 1rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   font-style: italic;
@@ -55,7 +63,7 @@ p.drink-price {
   margin-bottom: 10px;
 }
 
-.thumbnail ul {
+.card ul {
   list-style-type: none;
 }
 
