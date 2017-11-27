@@ -12,5 +12,12 @@ nav {
   font-size: 22px;
   letter-spacing: 3px;
   color: $primary-color-dark;
+}
 
+#login-button {
+  color: $primary-color-dark;
+  &:hover {
+    background-color: $gray;
+    border: 1px solid $gray;
+  }
 }

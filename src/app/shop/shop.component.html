@@ -25,7 +25,9 @@
         <p>Total: ${{ total }}</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" (click)="c('Close click')">Close</button>
+        <a routerLink="/checkout">
+          <button type="button" class="btn btn-default" (click)="c('Close click')">Checkout</button>
+        </a>
       </div>
     </ng-template>
     <div class="">

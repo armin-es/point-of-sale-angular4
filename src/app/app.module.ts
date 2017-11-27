@@ -10,13 +10,17 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ShopComponent } from './shop/shop.component';
 import { DrinkService } from './drink.service';
+import { LoginComponent } from './login/login.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    ShopComponent
+    ShopComponent,
+    LoginComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,9 @@ import { DrinkService } from './drink.service';
     HttpModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
-      {path: 'shop', component: ShopComponent}
+      {path: 'shop', component: ShopComponent},
+      {path: 'login', component: LoginComponent},
+      {path: 'checkout', component: CheckoutComponent}
     ]),
     NgbModule.forRoot()
   ],
