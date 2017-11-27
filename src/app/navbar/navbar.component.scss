@@ -1,7 +1,8 @@
+@import '~scss/variables';
+
 nav {
-  font-family: 'Raleway', sans-serif;
-  background-color: #e1e2e1;
-  border-bottom: 1px solid #e1e2e1;
+  background-color: $gray;
+  border-bottom: 1px solid $gray;
 
   box-shadow: 0 4px 8px -3px #999;
 }
@@ -10,5 +11,6 @@ nav {
   font-weight: bold;
   font-size: 22px;
   letter-spacing: 3px;
-  color: #950037;
+  color: $primary-color-dark;
+
 }

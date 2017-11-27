@@ -1,3 +1,5 @@
+@import '~scss/variables';
+
 h1.title {
 	letter-spacing: 0.3em;
 	width: 100vw;
@@ -8,13 +10,13 @@ h1.title {
 }
 
 #cover {
-	background:#e1e2e1 url('https://source.unsplash.com/MhOoD_h90ks/') center center no-repeat;
+	background:$gray url('https://source.unsplash.com/MhOoD_h90ks/') center center no-repeat;
 	background-size: cover;
 	opacity: 0.95;
 	height: 100vh;
 	width: 100vw;
 	text-align: center;
-	color: #e1e2e1;
+	color: $gray;
 }
 
 #cover-caption {
@@ -28,11 +30,11 @@ h1.title {
 }
 
 #order-button {
-	background-color: #CC0060;
+	background-color: $primary-color-medium;
 	border: none;
 	color: #e1e2e1;
 	font-size: 22px;
-	box-shadow: 0 0px 18px -3px #e1e2e1;
+	box-shadow: 0 0px 18px -3px $gray;
 	font-weight: bold;
     width: 10em;
     cursor: pointer;

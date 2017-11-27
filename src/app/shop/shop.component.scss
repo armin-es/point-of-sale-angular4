@@ -1,3 +1,5 @@
+@import '~scss/variables';
+
 #cart span {
   margin-left: 1.1em;
 }
@@ -8,38 +10,41 @@
   margin: 30px auto 20px;
   float: right;
   padding: 0 30px;
-}
 
-.button-container>button {
-  width: 7em;
-  text-align: left;
-  background-color: #990048;
-  color: #fff;
-  float: right;
-}
+  button {
+    width: 7em;
+    text-align: left;
+    background-color: $primary-color-dark;
+    color: $white;
+    float: right;
+  }
+  button:hover {
+    background-color: $primary-color-light;
+    color: $black;
+  }
 
-.button-container>button:hover {
-  background-color: #ff518d;
-  color: #000;
 }
 
 .modal-title {
   font-size: 1.2rem;
+  p {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10%;
+  }
+
+  a {
+    color: $primary-color-medium;
+  }
+
 }
 
-.modal-body p {
-  font-weight: bold;
-  text-align: right;
-  margin-top: 10%;
+.modal-footer {
+  button {
+    background-color: $gray;
+  }
 }
 
-.modal-body a {
-  color: #cc0060;
-}
-
-.modal-footer button {
-  background-color: #E1E2E1;
-}
 .drink-list-container {
   margin-top: 40px;
   width: 100%;
@@ -74,7 +79,6 @@ p.drink-price {
 }
 
 #add-to-cart-button {
-  background-color: #E1E2E1;
-
+  background-color: $gray;
 }
 
