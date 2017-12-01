@@ -4,6 +4,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from "angularfire2/auth";
+
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -32,7 +36,9 @@ import { CheckoutComponent } from './checkout/checkout.component';
       {path: 'login', component: LoginComponent},
       {path: 'checkout', component: CheckoutComponent}
     ]),
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
   ],
   providers: [DrinkService],
   bootstrap: [AppComponent]
