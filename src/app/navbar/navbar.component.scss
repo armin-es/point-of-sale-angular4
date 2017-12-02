@@ -7,12 +7,20 @@ nav {
   box-shadow: 0 4px 8px -3px #999;
 }
 
+a {
+  color: $primary-color-medium;
+  &:hover {
+    color: $primary-color-dark;
+  }
+}
+
 .navbar-brand {
   font-weight: bold;
   font-size: 22px;
   letter-spacing: 3px;
   color: $primary-color-dark;
 }
+
 
 #login-button {
   color: $primary-color-dark;
