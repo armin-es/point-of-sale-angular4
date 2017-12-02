@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from "angularfire2/auth";
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { environment } from '../environments/environment';
 
@@ -14,6 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ShopComponent } from './shop/shop.component';
 import { DrinkService } from './drink.service';
+import { AuthService } from './auth.service';
 import { LoginComponent } from './login/login.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 
@@ -40,7 +41,10 @@ import { CheckoutComponent } from './checkout/checkout.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule
   ],
-  providers: [DrinkService],
+  providers: [
+    DrinkService,
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

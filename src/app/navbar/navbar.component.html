@@ -18,7 +18,7 @@
 
 
 		</ul>
-		<div *ngIf="afAuth.authState | async as user; else showLogin;">
+		<div *ngIf="auth.user$ | async as user; else showLogin;">
 			<a class="nav-link dropdown-toggle" routerLink="/shop" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
 				(click)="logout()">{{ getUserFirstName(user) }}</a>
 			<div class="dropdown-menu" aria-labelledby="dropdown01">
