@@ -1,31 +1,45 @@
 @import '~scss/variables';
-
 nav {
-  background-color: $gray;
-  border-bottom: 1px solid $gray;
-
-  box-shadow: 0 4px 8px -3px #999;
+    background-color: $gray;
+    border-bottom: 1px solid $gray;
+    box-shadow: 0 4px 8px -3px #999;
 }
 
-a {
-  color: $primary-color-medium;
-  &:hover {
-    color: $primary-color-dark;
-  }
+.btn-outline {
+
+    &-user-menu {
+        background-color: transparent;
+        background-image: none;
+        border-color: $gray;
+        color: $primary-color-dark;
+        &:hover {
+            color: $primary-color-medium;
+        }
+    }
+
+    &-login {
+        background-color: transparent;
+        background-image: none;
+        border-color: transparent;
+        color: $primary-color-dark;
+        &:hover {
+            color: $primary-color-medium;
+        }
+    }
 }
+
 
 .navbar-brand {
-  font-weight: bold;
-  font-size: 22px;
-  letter-spacing: 3px;
-  color: $primary-color-dark;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: $primary-color-dark;
 }
 
-
 #login-button {
-  color: $primary-color-dark;
-  &:hover {
-    background-color: $gray;
-    border: 1px solid $gray;
-  }
+    color: $primary-color-dark;
+    &:hover {
+        background-color: $gray;
+        border: 1px solid $gray;
+    }
 }
